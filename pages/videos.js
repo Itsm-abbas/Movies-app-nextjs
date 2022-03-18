@@ -2,14 +2,15 @@ import Head from "next/head";
 import React from "react";
 import YouTube from "react-youtube";
 const Trailer = ({ data }) => {
+  console.log(data);
   return (
     <div>
+      <Head>
+        <title>{data[0].name} videos</title>
+      </Head>
       {data.map((item) => {
         return (
           <>
-            <Head>
-              <title>{data.original_title} videos</title>
-            </Head>
             <p style={{ color: "white", marginBottom: "1rem" }}>{item.name}</p>
             <YouTube videoId={`${item?.key}`} id="videoplayer" />
           </>
