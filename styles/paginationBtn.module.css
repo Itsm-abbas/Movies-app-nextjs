@@ -1,0 +1,19 @@
+.container {
+    max-width: 100%;
+    padding: 1rem 5rem;
+    background-color: #22254D;
+    color: white;
+}
+
+.container > div{
+    display: flex;justify-content: space-between;
+
+}
+.container>div>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+}

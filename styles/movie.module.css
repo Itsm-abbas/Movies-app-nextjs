@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.movie_box {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 0px 27px 6px rgba(0, 0, 0, 0.49);
+    -webkit-box-shadow: 2px 0px 27px 6px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 2px 0px 27px 6px rgba(0, 0, 0, 0.49);
+    width: auto;
+    background-color: #373b69;
+    margin: 1rem;
+}
+
+.movie_box img {
+    width: 100%;
+}
+
+.name_box {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.name_box h5 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0.2rem;
+    font-size: .9rem;
+    padding: 0 .3rem;
+}
+
+.name_box .movie_name {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.name_box h5 {
+    background-color: #22254D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: .3rem;
+}
+
+.overview {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    font-size: 1rem !important;
+    padding: 1.5rem;
+    transform: translateY(110%);
+    transition: .5s;
+
+}
+
+.movie_box:hover .overview {
+    bottom: 0;
+    font-size: 1.3rem;
+    padding: 1rem .7rem;
+    transform: translateY(0%);
+
+}
+
+.movie_box:hover .overview>p {
+    padding: 1rem 0;
+
+}
+
+.similarmovies {
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+    color: white;
+    padding: .4rem .6rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    background-color: #22254D;
+    transition: .3s all linear;
+}
+
+.similarmovies:hover {
+    background-color: #373b69;
+}
+
+@media screen and (max-width:1340px) {
+    .main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:750px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:500px) {
+    .main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
